@@ -64,9 +64,6 @@ class Question5:
                              'Low Additive Cost and Production Cost' : df.loc[df['LowAdditiveCostAndMatCost'] == True, 'DefectRate'].mean()
                              }])
         return df2.plot(kind = 'bar')
-    
-    
-display(Question5.Interaction(df=df))
 
 
 '''
@@ -74,5 +71,4 @@ display(Question5.Interaction(df=df))
 как минимум из-за большого количества дубляжа кода,
 но я пока не знаю как его убрать 
 '''
-
 
