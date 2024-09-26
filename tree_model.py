@@ -9,7 +9,7 @@ simplefilter('ignore')
 
 class TreeTest:
 
-    def test_supplierquality(df):
+    def rand_forest(df):
         tree = RandomForestClassifier(random_state=52, n_estimators=100)
         x = df[['DefectRate', 'SupplierQuality', 'EnergyConsumption', 'MaintenanceHours', 'QualityScore']]
         y = df['DefectStatus']
@@ -22,5 +22,5 @@ class TreeTest:
 
         return classification_report(y_holdout, tree.predict(X_holdout))
 
-print(TreeTest.test_supplierquality(df=df))
+print(TreeTest.rand_forest(df=df))
 
