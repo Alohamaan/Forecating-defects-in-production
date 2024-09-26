@@ -11,7 +11,7 @@ class TreeTest:
 
     def rand_forest(df):
         tree = RandomForestClassifier(random_state=52, n_estimators=100)
-        x = df[['DefectRate', 'SupplierQuality', 'EnergyConsumption', 'MaintenanceHours', 'QualityScore']]
+        x = df[[x for x in df.columns if x != 'DefectStatus']]
         y = df['DefectStatus']
 
         X_train, X_holdout, y_train, y_holdout = train_test_split(x, y,
