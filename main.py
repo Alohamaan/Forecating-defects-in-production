@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-from itertools import permutations as pm
+from itertools import product as p
 
 df = pd.read_csv('manufacturing_defect_dataset.csv')    
 pd.set_option('display.max_columns', 18)                
@@ -84,7 +84,7 @@ class Question5:
             if 'Cost' in x:
                 costs.append(f'high {x}')
                 costs.append(f'low {x}')
-        df2 = list(pm(costs, r=2))
+        df2 = list(p(costs, repeat=2))
 
         res = []
         for x in df2:
